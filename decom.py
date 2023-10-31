@@ -1,18 +1,30 @@
-from itertools import groupby
-
-
 def compress(data):
-    compressed = ""
 
-    # Use itertools.groupby for compression
-    for char, group in groupby(data):
-        count = len(list(group))
-        compressed += str(count) + char
+    if data == "":
+        return ""
+
+    compressed = ""
+    count = 1
+
+    # Iterate through the input string
+    for i in range(1, len(data)):
+        if data[i] == data[i - 1]:
+            count += 1
+        else:
+            compressed += str(count) + data[i - 1]
+            count = 1
+
+    # Handle the last character
+    compressed += str(count) + data[-1]
 
     return compressed
 
 
 def decompress(data):
+
+    if data == "":
+        return ""
+
     decompressed = ""
     i = 0
 
@@ -26,7 +38,7 @@ def decompress(data):
     return decompressed
 
 
-# Example usage:
+# Example
 input_data1 = "HELLOOO"
 input_data2 = "BWAAALAAA"
 

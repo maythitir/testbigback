@@ -6,6 +6,15 @@ def generate_combinations(arrays):
     for res in result:
         print(res)
 
+# function for test in 3_test_combime.py
+
+
+def generate_combinations_fortest(arrays):
+    result = [[]]
+    for array in arrays:
+        result = [prev + [item] for prev in result for item in array]
+    return result
+
 
 # Example
 source1 = [[1, 3, 4], [5, 6], [7, 8]]

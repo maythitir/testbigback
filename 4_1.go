@@ -36,8 +36,10 @@ func readCSVFile(filePath string) ([]Employee, error) {
 	if err != nil {
 		return nil, err
 	}
+	// Remove the header row
 	lines = lines[1:]
 
+	// Create employees array
 	for _, line := range lines {
 		employee := Employee{
 			ID:   line[0],

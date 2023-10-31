@@ -1,4 +1,6 @@
+# 1.
 def mysolution(s):
+
     char_count = {}  # Dictionary to store the count of each character
 
     # Count the occurrences of each character in the string
@@ -15,8 +17,7 @@ def mysolution(s):
 
 
 # Example usage:
-result1 = mysolution("abacabadabacabadee")
+result1 = mysolution("abacabadabacabadeef")
 result2 = mysolution("programming")
-
 print("Example 1:", result1)
 print("Example 2:", result2)
