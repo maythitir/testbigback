@@ -30,7 +30,7 @@ def decompress(data):
     return decompressed
 
 
-# Example usage:
+# Example
 input_data1 = "HELLOOO"
 input_data2 = "BWAAALAAA"
 
